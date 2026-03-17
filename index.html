@@ -1,191 +1,1139 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
-<html>
+<!DOCTYPE html>
+<html lang="en">
 <head>
-  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-  <meta http-equiv="Content-Style-Type" content="text/css">
-  <title></title>
-  <meta name="Generator" content="Cocoa HTML Writer">
-  <meta name="CocoaVersion" content="2685.4">
-  <style type="text/css">
-    body {background-color: #0a0b0d}
-    p.p1 {margin: 0.0px 0.0px 0.0px 0.0px; font: 11.0px 'Helvetica Neue'; color: #6ff5b7; -webkit-text-stroke: #6ff5b7}
-    p.p3 {margin: 0.0px 0.0px 52.0px 0.0px; font: 17.0px 'Helvetica Neue'; color: #677087; -webkit-text-stroke: #677087}
-    p.p4 {margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px 'Helvetica Neue'; color: #0a0b0d; -webkit-text-stroke: #0a0b0d; background-color: #6ff5b7}
-    p.p5 {margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px 'Helvetica Neue'; color: #677087; -webkit-text-stroke: #677087}
-    p.p6 {margin: 0.0px 0.0px 0.0px 0.0px; font: 32.0px 'Helvetica Neue'; color: #6ff5b7; -webkit-text-stroke: #6ff5b7}
-    p.p7 {margin: 0.0px 0.0px 0.0px 0.0px; font: 11.0px 'Helvetica Neue'; color: #677087; -webkit-text-stroke: #677087}
-    p.p8 {margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px 'Helvetica Neue'; color: #e2e8f2; -webkit-text-stroke: #e2e8f2; min-height: 15.0px}
-    p.p9 {margin: 0.0px 0.0px 0.0px 0.0px; font: 11.0px 'Helvetica Neue'; color: #42bff2; -webkit-text-stroke: #42bff2}
-    p.p11 {margin: 0.0px 0.0px 20.0px 0.0px; font: 16.0px 'Helvetica Neue'; color: #677087; -webkit-text-stroke: #677087}
-    p.p12 {margin: 0.0px 0.0px 0.0px 0.0px; font: 10.0px 'Helvetica Neue'; color: #30394a; -webkit-text-stroke: #30394a}
-    p.p13 {margin: 0.0px 0.0px 0.0px 0.0px; font: 11.0px 'Helvetica Neue'; color: #6ff5b7; -webkit-text-stroke: #6ff5b7; background-color: #6ff5b7; background-color: rgba(111, 245, 183, 0.078)}
-    p.p14 {margin: 0.0px 0.0px 0.0px 0.0px; font: 11.0px 'Helvetica Neue'; color: #42bff2; -webkit-text-stroke: #42bff2; background-color: #42bff2; background-color: rgba(66, 191, 242, 0.059)}
-    p.p15 {margin: 0.0px 0.0px 0.0px 0.0px; font: 16.0px 'Helvetica Neue'; color: #677087; -webkit-text-stroke: #677087}
-    p.p16 {margin: 0.0px 0.0px 0.0px 0.0px; font: 11.0px 'Helvetica Neue'; color: #30394a; -webkit-text-stroke: #30394a}
-    p.p17 {margin: 0.0px 0.0px 0.0px 0.0px; font: 20.0px 'Helvetica Neue'; color: #e2e8f2; -webkit-text-stroke: #e2e8f2}
-    p.p18 {margin: 0.0px 0.0px 24.0px 0.0px; font: 14.0px 'Helvetica Neue'; color: #677087; -webkit-text-stroke: #677087}
-    p.p19 {margin: 0.0px 0.0px 0.0px 0.0px; text-align: center; font: 10.0px 'Helvetica Neue'; color: #6ff5b7; -webkit-text-stroke: #6ff5b7}
-    p.p20 {margin: 0.0px 0.0px 0.0px 0.0px; text-align: center; font: 16.0px 'Helvetica Neue'; color: #e2e8f2; -webkit-text-stroke: #e2e8f2}
-    p.p21 {margin: 0.0px 0.0px 0.0px 0.0px; text-align: center; font: 13.0px 'Helvetica Neue'; color: #677087; -webkit-text-stroke: #677087}
-    p.p22 {margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px 'Helvetica Neue'; color: #6ff5b7; -webkit-text-stroke: #6ff5b7}
-    p.p23 {margin: 0.0px 0.0px 0.0px 0.0px; font: 16.0px 'Helvetica Neue'; color: #e2e8f2; -webkit-text-stroke: #e2e8f2}
-    p.p24 {margin: 0.0px 0.0px 0.0px 0.0px; font: 13.0px 'Helvetica Neue'; color: #677087; -webkit-text-stroke: #677087}
-    p.p25 {margin: 0.0px 0.0px 0.0px 0.0px; text-align: center; font: 11.0px 'Helvetica Neue'; color: #42bff2; -webkit-text-stroke: #42bff2}
-    p.p27 {margin: 0.0px 136.0px 48.0px 136.0px; text-align: center; text-indent: -136.0px; font: 16.0px 'Helvetica Neue'; color: #677087; -webkit-text-stroke: #677087}
-    p.p28 {margin: 0.0px 0.0px 16.0px 0.0px; text-align: center; font: 11.0px 'Helvetica Neue'; color: #30394a; -webkit-text-stroke: #30394a}
-    p.p29 {margin: 0.0px 0.0px 0.0px 0.0px; text-align: center; font: 18.0px 'Helvetica Neue'; color: #6ff5b7; -webkit-text-stroke: #6ff5b7}
-    li.li5 {margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px 'Helvetica Neue'; color: #677087; -webkit-text-stroke: #677087}
-    span.s1 {font: 17.0px 'Helvetica Neue'; font-kerning: none; color: #e2e8f2; background-color: rgba(10, 11, 13, 0.85); -webkit-text-stroke: 0px #e2e8f2}
-    span.s2 {font-kerning: none}
-    span.s3 {font-kerning: none; color: rgba(0, 0, 0, 0); -webkit-text-stroke: 1.5px #6ff5b7}
-    span.s4 {font-kerning: none; color: #e2e8f2; -webkit-text-stroke: 0px #e2e8f2}
-    span.s5 {font-kerning: none; background-color: #12151b}
-    span.s6 {font-kerning: none; background-color: #0d0f12}
-    span.s7 {background-color: #12151b; -webkit-text-stroke: 0px #000000}
-    span.s8 {font: 18.0px 'Helvetica Neue'; font-kerning: none; color: #6ff5b7; -webkit-text-stroke: 0px #6ff5b7}
-    ul.ul1 {list-style-type: disc}
-  </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Synthwave Capital | Financial Strategy & Advisory</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@300;400;500&family=Syne:wght@400;500;600;700;800&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --bg: #0a0c0f;
+    --bg2: #0f1217;
+    --bg3: #141820;
+    --surface: #161b24;
+    --border: rgba(255,255,255,0.07);
+    --border-bright: rgba(255,255,255,0.14);
+    --accent: #7DF4C4;
+    --accent2: #4ECBF5;
+    --accent-dim: rgba(125,244,196,0.08);
+    --accent-dim2: rgba(78,203,245,0.06);
+    --text: #e8edf5;
+    --text-muted: #7a8499;
+    --text-dim: #3f4a5c;
+    --glow: rgba(125,244,196,0.12);
+  }
+
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+  html { scroll-behavior: smooth; }
+
+  body {
+    font-family: 'Inter', sans-serif;
+    background: var(--bg);
+    color: var(--text);
+    line-height: 1.6;
+    overflow-x: hidden;
+  }
+
+  /* GRID TEXTURE */
+  body::before {
+    content: '';
+    position: fixed;
+    inset: 0;
+    background-image:
+      linear-gradient(rgba(125,244,196,0.025) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(125,244,196,0.025) 1px, transparent 1px);
+    background-size: 60px 60px;
+    pointer-events: none;
+    z-index: 0;
+  }
+
+  /* SCANLINE overlay */
+  body::after {
+    content: '';
+    position: fixed;
+    inset: 0;
+    background: repeating-linear-gradient(
+      0deg,
+      transparent,
+      transparent 2px,
+      rgba(0,0,0,0.06) 2px,
+      rgba(0,0,0,0.06) 4px
+    );
+    pointer-events: none;
+    z-index: 0;
+  }
+
+  /* NAV */
+  nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 100;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 48px;
+    height: 68px;
+    background: rgba(10,12,15,0.85);
+    backdrop-filter: blur(16px);
+    border-bottom: 1px solid var(--border);
+  }
+
+  .nav-logo {
+    font-family: 'Syne', sans-serif;
+    font-weight: 700;
+    font-size: 17px;
+    letter-spacing: 0.04em;
+    color: var(--text);
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+
+  .logo-mark {
+    width: 28px;
+    height: 28px;
+    border: 1.5px solid var(--accent);
+    border-radius: 4px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+  }
+
+  .logo-mark::before {
+    content: '';
+    width: 10px;
+    height: 1.5px;
+    background: var(--accent);
+    position: absolute;
+    top: 9px;
+    box-shadow: 0 4px 0 var(--accent), 0 8px 0 var(--accent2);
+  }
+
+  .nav-links {
+    display: flex;
+    align-items: center;
+    gap: 36px;
+    list-style: none;
+  }
+
+  .nav-links a {
+    font-family: 'DM Mono', monospace;
+    font-size: 12px;
+    font-weight: 400;
+    color: var(--text-muted);
+    text-decoration: none;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    transition: color 0.2s;
+  }
+
+  .nav-links a:hover { color: var(--accent); }
+
+  .nav-cta {
+    font-family: 'DM Mono', monospace;
+    font-size: 12px;
+    font-weight: 500;
+    color: var(--accent) !important;
+    border: 1px solid rgba(125,244,196,0.3);
+    padding: 8px 18px;
+    border-radius: 3px;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    transition: all 0.2s !important;
+  }
+
+  .nav-cta:hover {
+    background: var(--accent-dim) !important;
+    border-color: var(--accent) !important;
+    color: var(--accent) !important;
+  }
+
+  /* SECTIONS */
+  section {
+    position: relative;
+    z-index: 1;
+  }
+
+  /* HERO */
+  #hero {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 120px 48px 80px;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+
+  .hero-eyebrow {
+    font-family: 'DM Mono', monospace;
+    font-size: 11px;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: var(--accent);
+    margin-bottom: 28px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+  }
+
+  .hero-eyebrow::before {
+    content: '';
+    display: inline-block;
+    width: 32px;
+    height: 1px;
+    background: var(--accent);
+  }
+
+  .hero-h1 {
+    font-family: 'Syne', sans-serif;
+    font-weight: 800;
+    font-size: clamp(48px, 7vw, 88px);
+    line-height: 1.0;
+    letter-spacing: -0.02em;
+    color: var(--text);
+    margin-bottom: 32px;
+  }
+
+  .hero-h1 em {
+    font-style: normal;
+    color: transparent;
+    -webkit-text-stroke: 1.5px var(--accent);
+  }
+
+  .hero-sub {
+    font-size: 17px;
+    font-weight: 300;
+    color: var(--text-muted);
+    max-width: 520px;
+    line-height: 1.7;
+    margin-bottom: 52px;
+  }
+
+  .hero-actions {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    flex-wrap: wrap;
+  }
+
+  .btn-primary {
+    font-family: 'DM Mono', monospace;
+    font-size: 12px;
+    font-weight: 500;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--bg);
+    background: var(--accent);
+    border: none;
+    padding: 14px 28px;
+    border-radius: 3px;
+    text-decoration: none;
+    cursor: pointer;
+    transition: all 0.2s;
+  }
+
+  .btn-primary:hover {
+    background: #a3f7d4;
+    transform: translateY(-1px);
+  }
+
+  .btn-ghost {
+    font-family: 'DM Mono', monospace;
+    font-size: 12px;
+    font-weight: 400;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--text-muted);
+    background: transparent;
+    border: 1px solid var(--border-bright);
+    padding: 14px 28px;
+    border-radius: 3px;
+    text-decoration: none;
+    cursor: pointer;
+    transition: all 0.2s;
+  }
+
+  .btn-ghost:hover {
+    color: var(--text);
+    border-color: rgba(255,255,255,0.25);
+  }
+
+  .hero-stats {
+    display: flex;
+    align-items: center;
+    gap: 48px;
+    margin-top: 72px;
+    padding-top: 48px;
+    border-top: 1px solid var(--border);
+    flex-wrap: wrap;
+  }
+
+  .hero-stat-num {
+    font-family: 'Syne', sans-serif;
+    font-weight: 700;
+    font-size: 32px;
+    color: var(--accent);
+    line-height: 1;
+    margin-bottom: 4px;
+  }
+
+  .hero-stat-label {
+    font-family: 'DM Mono', monospace;
+    font-size: 11px;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--text-muted);
+  }
+
+  /* ABOUT */
+  #about {
+    padding: 120px 48px;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+
+  .section-tag {
+    font-family: 'DM Mono', monospace;
+    font-size: 11px;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: var(--accent2);
+    margin-bottom: 20px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+
+  .section-tag::before {
+    content: '';
+    display: inline-block;
+    width: 20px;
+    height: 1px;
+    background: var(--accent2);
+  }
+
+  .section-h2 {
+    font-family: 'Syne', sans-serif;
+    font-weight: 700;
+    font-size: clamp(32px, 4vw, 48px);
+    line-height: 1.1;
+    letter-spacing: -0.02em;
+    margin-bottom: 24px;
+  }
+
+  .about-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 80px;
+    align-items: start;
+    margin-top: 60px;
+  }
+
+  .about-text p {
+    font-size: 16px;
+    font-weight: 300;
+    color: var(--text-muted);
+    line-height: 1.8;
+    margin-bottom: 20px;
+  }
+
+  .about-text p strong {
+    color: var(--text);
+    font-weight: 500;
+  }
+
+  .about-card {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 6px;
+    padding: 32px;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .about-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 2px;
+    background: linear-gradient(90deg, var(--accent), var(--accent2));
+  }
+
+  .about-card-label {
+    font-family: 'DM Mono', monospace;
+    font-size: 10px;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: var(--text-dim);
+    margin-bottom: 20px;
+  }
+
+  .about-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-top: 16px;
+  }
+
+  .tag {
+    font-family: 'DM Mono', monospace;
+    font-size: 11px;
+    color: var(--accent);
+    background: var(--accent-dim);
+    border: 1px solid rgba(125,244,196,0.15);
+    padding: 5px 12px;
+    border-radius: 2px;
+    letter-spacing: 0.05em;
+  }
+
+  .tag-blue {
+    color: var(--accent2);
+    background: var(--accent-dim2);
+    border-color: rgba(78,203,245,0.15);
+  }
+
+  /* SERVICES */
+  #services {
+    padding: 120px 48px;
+    background: var(--bg2);
+    border-top: 1px solid var(--border);
+    border-bottom: 1px solid var(--border);
+  }
+
+  .services-inner {
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+
+  .services-header {
+    margin-bottom: 64px;
+  }
+
+  .services-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1px;
+    background: var(--border);
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    overflow: hidden;
+  }
+
+  .service-card {
+    background: var(--surface);
+    padding: 40px 36px;
+    position: relative;
+    transition: background 0.25s;
+  }
+
+  .service-card:hover {
+    background: #1a2130;
+  }
+
+  .service-number {
+    font-family: 'DM Mono', monospace;
+    font-size: 11px;
+    color: var(--text-dim);
+    letter-spacing: 0.1em;
+    margin-bottom: 28px;
+  }
+
+  .service-icon {
+    width: 40px;
+    height: 40px;
+    margin-bottom: 20px;
+    opacity: 0.9;
+  }
+
+  .service-title {
+    font-family: 'Syne', sans-serif;
+    font-weight: 600;
+    font-size: 20px;
+    letter-spacing: -0.01em;
+    margin-bottom: 14px;
+    color: var(--text);
+  }
+
+  .service-desc {
+    font-size: 14px;
+    font-weight: 300;
+    color: var(--text-muted);
+    line-height: 1.7;
+    margin-bottom: 24px;
+  }
+
+  .service-items {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+  }
+
+  .service-items li {
+    font-family: 'DM Mono', monospace;
+    font-size: 12px;
+    color: var(--text-muted);
+    padding-left: 16px;
+    position: relative;
+    letter-spacing: 0.02em;
+  }
+
+  .service-items li::before {
+    content: '›';
+    position: absolute;
+    left: 0;
+    color: var(--accent);
+  }
+
+  /* WHO WE SERVE */
+  #clients {
+    padding: 120px 48px;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+
+  .clients-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 16px;
+    margin-top: 56px;
+  }
+
+  .client-tile {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 6px;
+    padding: 28px 24px;
+    text-align: center;
+    transition: border-color 0.2s, transform 0.2s;
+  }
+
+  .client-tile:hover {
+    border-color: var(--border-bright);
+    transform: translateY(-2px);
+  }
+
+  .client-stage {
+    font-family: 'DM Mono', monospace;
+    font-size: 10px;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: var(--accent);
+    margin-bottom: 10px;
+  }
+
+  .client-type {
+    font-family: 'Syne', sans-serif;
+    font-weight: 600;
+    font-size: 16px;
+    color: var(--text);
+    margin-bottom: 10px;
+  }
+
+  .client-desc {
+    font-size: 13px;
+    font-weight: 300;
+    color: var(--text-muted);
+    line-height: 1.6;
+  }
+
+  /* HOW IT WORKS */
+  #process {
+    padding: 120px 48px;
+    background: var(--bg2);
+    border-top: 1px solid var(--border);
+    border-bottom: 1px solid var(--border);
+  }
+
+  .process-inner {
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+
+  .process-steps {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 0;
+    margin-top: 64px;
+    position: relative;
+  }
+
+  .process-steps::before {
+    content: '';
+    position: absolute;
+    top: 20px;
+    left: 12.5%;
+    right: 12.5%;
+    height: 1px;
+    background: linear-gradient(90deg, transparent, var(--accent), var(--accent2), transparent);
+    opacity: 0.3;
+  }
+
+  .process-step {
+    padding: 0 28px;
+    position: relative;
+  }
+
+  .step-dot {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    border: 1px solid var(--border-bright);
+    background: var(--bg2);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 24px;
+    font-family: 'DM Mono', monospace;
+    font-size: 12px;
+    color: var(--accent);
+  }
+
+  .step-title {
+    font-family: 'Syne', sans-serif;
+    font-weight: 600;
+    font-size: 16px;
+    margin-bottom: 10px;
+    color: var(--text);
+  }
+
+  .step-desc {
+    font-size: 13px;
+    font-weight: 300;
+    color: var(--text-muted);
+    line-height: 1.7;
+  }
+
+  /* CONTACT */
+  #contact {
+    padding: 140px 48px;
+    max-width: 900px;
+    margin: 0 auto;
+    text-align: center;
+  }
+
+  .contact-h2 {
+    font-family: 'Syne', sans-serif;
+    font-weight: 800;
+    font-size: clamp(36px, 5vw, 60px);
+    letter-spacing: -0.02em;
+    line-height: 1.05;
+    margin-bottom: 24px;
+  }
+
+  .contact-h2 em {
+    font-style: normal;
+    color: transparent;
+    -webkit-text-stroke: 1.5px var(--accent);
+  }
+
+  .contact-sub {
+    font-size: 16px;
+    font-weight: 300;
+    color: var(--text-muted);
+    max-width: 480px;
+    margin: 0 auto 48px;
+    line-height: 1.7;
+  }
+
+  .contact-card {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    padding: 48px;
+    max-width: 520px;
+    margin: 0 auto;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .contact-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 1px;
+    background: linear-gradient(90deg, transparent, var(--accent), var(--accent2), transparent);
+  }
+
+  .contact-email {
+    font-family: 'DM Mono', monospace;
+    font-size: 18px;
+    color: var(--accent);
+    text-decoration: none;
+    letter-spacing: 0.03em;
+    display: block;
+    margin-bottom: 20px;
+    transition: color 0.2s;
+  }
+
+  .contact-email:hover { color: #a3f7d4; }
+
+  .contact-note {
+    font-family: 'DM Mono', monospace;
+    font-size: 11px;
+    color: var(--text-dim);
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    margin-top: 24px;
+  }
+
+  /* FOOTER */
+  footer {
+    border-top: 1px solid var(--border);
+    padding: 32px 48px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: relative;
+    z-index: 1;
+  }
+
+  .footer-logo {
+    font-family: 'Syne', sans-serif;
+    font-weight: 700;
+    font-size: 14px;
+    letter-spacing: 0.04em;
+    color: var(--text-muted);
+  }
+
+  .footer-copy {
+    font-family: 'DM Mono', monospace;
+    font-size: 11px;
+    color: var(--text-dim);
+    letter-spacing: 0.08em;
+  }
+
+  .footer-legal {
+    font-family: 'DM Mono', monospace;
+    font-size: 11px;
+    color: var(--text-dim);
+    letter-spacing: 0.05em;
+  }
+
+  /* DIVIDER GLOW */
+  .glow-divider {
+    width: 100%;
+    height: 1px;
+    background: linear-gradient(90deg, transparent, var(--glow), transparent);
+    position: relative;
+    z-index: 1;
+  }
+
+  /* RESPONSIVE */
+  @media (max-width: 900px) {
+    nav { padding: 0 24px; }
+    .nav-links { display: none; }
+    #hero, #about, #clients, #contact { padding-left: 24px; padding-right: 24px; }
+    #services, #process { padding-left: 24px; padding-right: 24px; }
+    .about-grid { grid-template-columns: 1fr; gap: 40px; }
+    .services-grid { grid-template-columns: 1fr; }
+    .clients-grid { grid-template-columns: repeat(2, 1fr); }
+    .process-steps { grid-template-columns: repeat(2, 1fr); gap: 32px; }
+    .process-steps::before { display: none; }
+    footer { flex-direction: column; gap: 12px; text-align: center; }
+  }
+
+  @media (max-width: 560px) {
+    .clients-grid { grid-template-columns: 1fr; }
+    .hero-stats { gap: 28px; }
+  }
+
+  /* FADE IN ANIMATION */
+  @keyframes fadeUp {
+    from { opacity: 0; transform: translateY(20px); }
+    to   { opacity: 1; transform: translateY(0); }
+  }
+
+  .fade-up {
+    opacity: 0;
+    animation: fadeUp 0.7s ease forwards;
+  }
+  .fade-up:nth-child(1) { animation-delay: 0.1s; }
+  .fade-up:nth-child(2) { animation-delay: 0.2s; }
+  .fade-up:nth-child(3) { animation-delay: 0.35s; }
+  .fade-up:nth-child(4) { animation-delay: 0.5s; }
+
+  /* TERMINAL BLINK */
+  @keyframes blink {
+    0%,100% { opacity: 1; }
+    50% { opacity: 0; }
+  }
+
+  .cursor {
+    display: inline-block;
+    width: 2px;
+    height: 1em;
+    background: var(--accent);
+    vertical-align: middle;
+    margin-left: 4px;
+    animation: blink 1.1s step-end infinite;
+  }
+</style>
 </head>
 <body>
-<p class="p1"><span class="s1">SYNTHWAVE CAPITAL </span><span class="s2">FINANCIAL STRATEGY &amp; ADVISORY</span></p>
-<h1 style="margin: 0.0px 0.0px 32.0px 0.0px; font: 56.0px 'Helvetica Neue'; color: #e2e8f2; -webkit-text-stroke: #e2e8f2"><span class="s2">Finance that<br>
-</span><span class="s3">grows</span><span class="s2"> with<br>
-your business.</span></h1>
-<p class="p3"><span class="s2">Embedded financial leadership for companies that need clarity, structure, and a strategic partner without the full-time overhead.</span></p>
-<p class="p4"><span class="s2">VIEW SERVICES</span></p>
-<p class="p5"><span class="s2">START A CONVERSATION</span></p>
-<p class="p6"><span class="s2">Operational Finance</span></p>
-<p class="p7"><span class="s2">PLANNING &amp; ANALYSIS</span></p>
-<p class="p6"><span class="s2">CFO</span></p>
-<p class="p7"><span class="s2">STRATEGIC ADVISORY</span></p>
-<p class="p6"><span class="s2">Seed → Late</span></p>
-<p class="p7"><span class="s2">ALL COMPANY STAGES</span></p>
-<p class="p6"><span class="s2">TX-Based</span></p>
-<p class="p7"><span class="s2">SERVING TEAMS NATIONWIDE</span></p>
-<p class="p8"><span class="s2"></span><br></p>
-<p class="p9"><span class="s2">ABOUT</span></p>
-<h2 style="margin: 0.0px 0.0px 24.0px 0.0px; font: 32.0px 'Helvetica Neue'; color: #e2e8f2; -webkit-text-stroke: #e2e8f2"><span class="s2">Financial expertise,<br>
-built for founders and operators.</span></h2>
-<p class="p11"><span class="s4">Synthwave Capital</span><span class="s2"> is a boutique financial advisory practice based in Texas, built for founders, operators, and leadership teams who need rigorous financial thinking without the complexity or cost of a full-time hire.</span></p>
-<p class="p11"><span class="s2">We specialize in the kind of work that actually moves companies forward, building<span class="Apple-converted-space">  </span>models and providing services you will actually use. Whether you're raising your next round, managing board expectations, or simply trying to understand what's happening in your business, we bring the experience to help.</span></p>
-<p class="p11"><span class="s2">We have lived our professional lives in the venture-backed technology and product world with hands-on experience across Consumer, SaaS, and Fintech at every stage, from early seed through late-stage growth.</span></p>
-<p class="p12"><span class="s5">// AREAS OF EXPERTISE</span></p>
-<p class="p13"><span class="s2">Financial Planning &amp; Analysis</span></p>
-<p class="p13"><span class="s2">Budget Management</span></p>
-<p class="p13"><span class="s2">Financial Modeling</span></p>
-<p class="p13"><span class="s2">Board Reporting</span></p>
-<p class="p13"><span class="s2">Headcount Planning</span></p>
-<p class="p13"><span class="s2">Cash Flow Management</span></p>
-<p class="p14"><span class="s2">SaaS Metrics</span></p>
-<p class="p14"><span class="s2">Fundraising Support</span></p>
-<p class="p14"><span class="s2">Scenario Planning</span></p>
-<p class="p14"><span class="s2">Accounting Oversight</span></p>
-<p class="p14"><span class="s2">Fractional CFO</span></p>
-<p class="p14"><span class="s2">Treasury</span></p>
-<p class="p12"><span class="s5">// VERTICALS</span></p>
-<p class="p13"><span class="s2">Consumer</span></p>
-<p class="p13"><span class="s2">SaaS</span></p>
-<p class="p13"><span class="s2">Fintech</span></p>
-<p class="p12"><span class="s5">// COMPANY STAGES</span></p>
-<p class="p13"><span class="s2">Seed</span></p>
-<p class="p13"><span class="s2">Series A+</span></p>
-<p class="p13"><span class="s2">Late-Stage Growth</span></p>
-<p class="p9"><span class="s6">SERVICES</span></p>
-<h2 style="margin: 0.0px 0.0px 24.0px 0.0px; font: 32.0px 'Helvetica Neue'; color: #e2e8f2; -webkit-text-stroke: #e2e8f2"><span class="s6">What we do.</span></h2>
-<p class="p15"><span class="s6">Flexible engagements built around your needs — from one-time projects to ongoing fractional partnerships.</span></p>
-<p class="p16"><span class="s5">01 ——</span></p>
-<p class="p17"><span class="s5">FP&amp;A (Financial Planning &amp; Analysis)</span></p>
-<p class="p18"><span class="s5">Build the financial foundation your company needs to operate and scale with confidence.</span></p>
-<ul class="ul1">
-  <li class="li5"><span class="s7"></span><span class="s5">Annual budgeting &amp; forecasting</span></li>
-  <li class="li5"><span class="s7"></span><span class="s5">Cash flow management and analysis</span></li>
-  <li class="li5"><span class="s7"></span><span class="s5">Variance analysis &amp; reporting</span></li>
-  <li class="li5"><span class="s7"></span><span class="s5">KPI dashboards &amp; metrics frameworks</span></li>
-  <li class="li5"><span class="s7"></span><span class="s5">Board &amp; investor reporting packages</span></li>
-</ul>
-<p class="p16"><span class="s5">02 ——</span></p>
-<p class="p17"><span class="s5">Fractional CFO</span></p>
-<p class="p18"><span class="s5">Senior financial leadership on your terms. Strategic guidance and execution support without the full-time commitment.</span></p>
-<ul class="ul1">
-  <li class="li5"><span class="s7"></span><span class="s5">Strategic financial planning</span></li>
-  <li class="li5"><span class="s7"></span><span class="s5">Fundraising &amp; investor relations support</span></li>
-  <li class="li5"><span class="s7"></span><span class="s5">Cash flow &amp; treasury management</span></li>
-  <li class="li5"><span class="s7"></span><span class="s5">Finance team build-out &amp; mentorship</span></li>
-  <li class="li5"><span class="s7"></span><span class="s5">M&amp;A and transaction support</span></li>
-</ul>
-<p class="p16"><span class="s5">03 ——</span></p>
-<p class="p17"><span class="s5">Accounting &amp; Controls</span></p>
-<p class="p18"><span class="s5">Clean books and tight processes are the foundation of good financial management. We help you build and maintain both.</span></p>
-<ul class="ul1">
-  <li class="li5"><span class="s7"></span><span class="s5">Month-end close oversight</span></li>
-  <li class="li5"><span class="s7"></span><span class="s5">Financial statement review</span></li>
-  <li class="li5"><span class="s7"></span><span class="s5">Chart of accounts setup</span></li>
-  <li class="li5"><span class="s7"></span><span class="s5">Accounting team management</span></li>
-  <li class="li5"><span class="s7"></span><span class="s5">Audit &amp; compliance preparation</span></li>
-</ul>
-<p class="p16"><span class="s5">04 ——</span></p>
-<p class="p17"><span class="s5">Headcount Planning</span></p>
-<p class="p18"><span class="s5">Hiring decisions are your largest cost lever. Build plans that align headcount with growth while keeping runway in check.</span></p>
-<ul class="ul1">
-  <li class="li5"><span class="s7"></span><span class="s5">Headcount modeling &amp; capacity planning</span></li>
-  <li class="li5"><span class="s7"></span><span class="s5">Compensation benchmarking</span></li>
-  <li class="li5"><span class="s7"></span><span class="s5">Departmental hiring plans</span></li>
-  <li class="li5"><span class="s7"></span><span class="s5">Workforce cost analysis</span></li>
-  <li class="li5"><span class="s7"></span><span class="s5">Org design financial modeling</span></li>
-</ul>
-<p class="p16"><span class="s5">05 ——</span></p>
-<p class="p17"><span class="s5">Financial Modeling</span></p>
-<p class="p18"><span class="s5">Purpose-built models for fundraising, strategic decisions, and scenario analysis.</span></p>
-<ul class="ul1">
-  <li class="li5"><span class="s7"></span><span class="s5">Three-statement financial models</span></li>
-  <li class="li5"><span class="s7"></span><span class="s5">Fundraise &amp; runway modeling</span></li>
-  <li class="li5"><span class="s7"></span><span class="s5">Scenario &amp; sensitivity analysis</span></li>
-  <li class="li5"><span class="s7"></span><span class="s5">Unit economics modeling</span></li>
-  <li class="li5"><span class="s7"></span><span class="s5">Investor-ready model builds</span></li>
-</ul>
-<p class="p16"><span class="s5">06 ——</span></p>
-<p class="p17"><span class="s5">Strategic Projects</span></p>
-<p class="p18"><span class="s5">One-time or project-based engagements for specific financial challenges.</span></p>
-<ul class="ul1">
-  <li class="li5"><span class="s7"></span><span class="s5">SaaS metrics &amp; benchmarking</span></li>
-  <li class="li5"><span class="s7"></span><span class="s5">Pricing &amp; unit economics analysis</span></li>
-  <li class="li5"><span class="s7"></span><span class="s5">Financial due diligence support</span></li>
-  <li class="li5"><span class="s7"></span><span class="s5">Process &amp; systems assessment</span></li>
-  <li class="li5"><span class="s7"></span><span class="s5">Ad hoc financial analysis</span></li>
-</ul>
-<p class="p9"><span class="s2">WHO WE SERVE</span></p>
-<h2 style="margin: 0.0px 0.0px 24.0px 0.0px; font: 32.0px 'Helvetica Neue'; color: #e2e8f2; -webkit-text-stroke: #e2e8f2"><span class="s2">Built for builders.</span></h2>
-<p class="p15"><span class="s2">We work best with teams that are moving fast and need a financial partner who can keep up.</span></p>
-<p class="p19"><span class="s5">SEED / PRE-SERIES A</span></p>
-<p class="p20"><span class="s5">Early-Stage Startups</span></p>
-<p class="p21"><span class="s5">Get financial infrastructure in place before you need it. Build your first budget, model your runway, and show up to fundraising conversations prepared.</span></p>
-<p class="p19"><span class="s5">SERIES A / B</span></p>
-<p class="p20"><span class="s5">Growth-Stage Companies</span></p>
-<p class="p21"><span class="s5">Professionalize your finance function as your team and complexity grows. Move from scrappy to structured without losing speed.</span></p>
-<p class="p19"><span class="s5">SERIES B+</span></p>
-<p class="p20"><span class="s5">Scaling Organizations</span></p>
-<p class="p21"><span class="s5">Sophisticated FP&amp;A support for teams that need rigorous planning, cross-functional financial alignment, and board-ready reporting.</span></p>
-<p class="p19"><span class="s5">ANY STAGE</span></p>
-<p class="p20"><span class="s5">Small Businesses</span></p>
-<p class="p21"><span class="s5">Founder-led businesses that need a trusted financial advisor to help make sense of the numbers and make better decisions.</span></p>
-<p class="p9"><span class="s6">HOW IT WORKS</span></p>
-<h2 style="margin: 0.0px 0.0px 24.0px 0.0px; font: 32.0px 'Helvetica Neue'; color: #e2e8f2; -webkit-text-stroke: #e2e8f2"><span class="s6">Simple by design.</span></h2>
-<p class="p22"><span class="s6">01</span></p>
-<p class="p23"><span class="s6">Intro Call</span></p>
-<p class="p24"><span class="s6">We start with a short conversation to understand your business, your current finance setup, and what you need help with.</span></p>
-<p class="p22"><span class="s6">02</span></p>
-<p class="p23"><span class="s6">Scope &amp; Proposal</span></p>
-<p class="p24"><span class="s6">We define the engagement clearly with deliverables, timeline, and pricing. No ambiguity, no surprise scope creep.</span></p>
-<p class="p22"><span class="s6">03</span></p>
-<p class="p23"><span class="s6">Execution</span></p>
-<p class="p24"><span class="s6">We get to work. Expect clear communication, fast turnarounds, and outputs built for your actual audience.</span></p>
-<p class="p22"><span class="s6">04</span></p>
-<p class="p23"><span class="s6">Ongoing or One-Time</span></p>
-<p class="p24"><span class="s6">We can stay on as a fractional partner or wrap after a defined project. The relationship is structured however works best for you.</span></p>
-<p class="p25"><span class="s2">CONTACT</span></p>
-<h2 style="margin: 0.0px 0.0px 24.0px 0.0px; text-align: center; font: 40.0px 'Helvetica Neue'; color: #e2e8f2; -webkit-text-stroke: #e2e8f2"><span class="s2">Let's talk </span><span class="s3">numbers.</span></h2>
-<p class="p27"><span class="s2">Whether you have a specific project in mind or just want to explore what working together could look like, reach out.</span></p>
-<p class="p28"><span class="s5">// GET IN TOUCH</span></p>
-<p class="p29"><span class="s5"><a href="mailto:hello@synthwavecapital.com">hello@synthwavecapital.com<span class="s8"></span></a></span></p>
+
+<!-- NAV -->
+<nav>
+  <a href="#" class="nav-logo">
+    <div class="logo-mark"></div>
+    SYNTHWAVE CAPITAL
+  </a>
+  <ul class="nav-links">
+    <li><a href="#about">About</a></li>
+    <li><a href="#services">Services</a></li>
+    <li><a href="#clients">Who We Serve</a></li>
+    <li><a href="#contact" class="nav-cta">Get in Touch</a></li>
+  </ul>
+</nav>
+
+<!-- HERO -->
+<section id="hero">
+  <div class="hero-eyebrow fade-up">Financial Strategy & Advisory</div>
+  <h1 class="hero-h1 fade-up">
+    Finance that<br>
+    grows with<br>
+    your business.
+  </h1>
+  <p class="hero-sub fade-up">
+    Embedded financial leadership for companies that need clarity, structure, and a strategic partner without the full-time overhead.
+  </p>
+  <div class="hero-actions fade-up">
+    <a href="#services" class="btn-primary">View Services</a>
+    <a href="#contact" class="btn-ghost">Start a Conversation</a>
+  </div>
+
+  <div class="hero-stats">
+    <div>
+      <div class="hero-stat-num">Operational Finance</div>
+      <div class="hero-stat-label">Planning & Analysis</div>
+    </div>
+    <div>
+      <div class="hero-stat-num">CFO</div>
+      <div class="hero-stat-label">Strategic Advisory</div>
+    </div>
+    <div>
+      <div class="hero-stat-num">Seed → Late</div>
+      <div class="hero-stat-label">All Company Stages</div>
+    </div>
+    <div>
+      <div class="hero-stat-num">TX-Based<span class="cursor"></span></div>
+      <div class="hero-stat-label">Serving Teams Nationwide</div>
+    </div>
+  </div>
+</section>
+
+<div class="glow-divider"></div>
+
+<!-- ABOUT -->
+<section id="about">
+  <div class="section-tag">About</div>
+  <h2 class="section-h2">Financial expertise,<br>built for founders and operators.</h2>
+
+  <div class="about-grid">
+    <div class="about-text">
+      <p>
+        <strong>Synthwave Capital</strong> is a boutique financial advisory practice based in Texas, built for founders, operators, and leadership teams who need rigorous financial thinking without the complexity or cost of a full-time hire.
+      </p>
+      <p>
+        We specialize in the kind of work that actually moves companies forward, building models and providing services you will actually use. Whether you're raising your next round, managing board expectations, or simply trying to understand what's happening in your business, we bring the experience to help.
+      </p>
+      <p>
+        We have lived our professional lives in the venture-backed technology and product world with hands-on experience across Consumer, SaaS, and Fintech at every stage, from early seed through late-stage growth.
+      </p>
+    </div>
+
+    <div>
+      <div class="about-card">
+        <div class="about-card-label">// Areas of Expertise</div>
+        <div class="about-tags">
+          <span class="tag">Financial Planning & Analysis</span>
+          <span class="tag">Budget Management</span>
+          <span class="tag">Financial Modeling</span>
+          <span class="tag">Board Reporting</span>
+          <span class="tag">Headcount Planning</span>
+          <span class="tag">Cash Flow Management</span>
+          <span class="tag-blue tag">SaaS Metrics</span>
+          <span class="tag-blue tag">Fundraising Support</span>
+          <span class="tag-blue tag">Scenario Planning</span>
+          <span class="tag-blue tag">Accounting Oversight</span>
+          <span class="tag-blue tag">Fractional CFO</span>
+          <span class="tag-blue tag">Treasury</span>
+        </div>
+
+        <div style="margin-top: 32px; padding-top: 24px; border-top: 1px solid var(--border);">
+          <div class="about-card-label">// Verticals</div>
+          <div class="about-tags" style="margin-top: 12px;">
+            <span class="tag">Consumer</span>
+            <span class="tag">SaaS</span>
+            <span class="tag">Fintech</span>
+          </div>
+        </div>
+
+        <div style="margin-top: 24px; padding-top: 24px; border-top: 1px solid var(--border);">
+          <div class="about-card-label">// Company Stages</div>
+          <div class="about-tags" style="margin-top: 12px;">
+            <span class="tag">Seed</span>
+            <span class="tag">Series A+</span>
+            <span class="tag">Late-Stage Growth</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SERVICES -->
+<section id="services">
+  <div class="services-inner">
+    <div class="services-header">
+      <div class="section-tag">Services</div>
+      <h2 class="section-h2">What we do.</h2>
+      <p style="font-size: 16px; font-weight: 300; color: var(--text-muted); max-width: 560px; margin-top: 16px; line-height: 1.7;">
+        Flexible engagements built around your actual needs, from one-time projects to ongoing fractional partnerships.
+      </p>
+    </div>
+
+    <div class="services-grid">
+
+      <!-- Service 1 -->
+      <div class="service-card">
+        <div class="service-number">01 ——</div>
+        <svg class="service-icon" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <rect x="4" y="28" width="6" height="8" rx="1" fill="#7DF4C4" opacity="0.4"/>
+          <rect x="13" y="20" width="6" height="16" rx="1" fill="#7DF4C4" opacity="0.6"/>
+          <rect x="22" y="12" width="6" height="24" rx="1" fill="#7DF4C4" opacity="0.8"/>
+          <rect x="31" y="6" width="6" height="30" rx="1" fill="#7DF4C4"/>
+          <path d="M7 22L16 16L25 8L34 4" stroke="#4ECBF5" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+          <circle cx="7" cy="22" r="2" fill="#4ECBF5"/>
+          <circle cx="34" cy="4" r="2" fill="#4ECBF5"/>
+        </svg>
+        <div class="service-title">FP&A</div>
+        <p class="service-desc">
+          Build the financial foundation your company needs to operate and scale with confidence.
+        </p>
+        <ul class="service-items">
+          <li>Annual budgeting & forecasting</li>
+          <li>Rolling forecast management</li>
+          <li>Variance analysis & reporting</li>
+          <li>KPI dashboards & metrics frameworks</li>
+          <li>Board & investor reporting packages</li>
+        </ul>
+      </div>
+
+      <!-- Service 2 -->
+      <div class="service-card">
+        <div class="service-number">02 ——</div>
+        <svg class="service-icon" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <circle cx="20" cy="20" r="14" stroke="#7DF4C4" stroke-width="1.5" opacity="0.4"/>
+          <circle cx="20" cy="20" r="9" stroke="#7DF4C4" stroke-width="1.5" opacity="0.6"/>
+          <circle cx="20" cy="20" r="4" fill="#7DF4C4"/>
+          <path d="M20 6V10M20 30V34M6 20H10M30 20H34" stroke="#4ECBF5" stroke-width="1.5" stroke-linecap="round"/>
+        </svg>
+        <div class="service-title">Fractional CFO</div>
+        <p class="service-desc">
+          Senior financial leadership on your terms. Strategic guidance and execution support without the full-time commitment.
+        </p>
+        <ul class="service-items">
+          <li>Strategic financial planning</li>
+          <li>Fundraising & investor relations support</li>
+          <li>Cash flow & treasury management</li>
+          <li>Finance team build-out & mentorship</li>
+          <li>M&A and transaction support</li>
+        </ul>
+      </div>
+
+      <!-- Service 3 -->
+      <div class="service-card">
+        <div class="service-number">03 ——</div>
+        <svg class="service-icon" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <rect x="5" y="8" width="30" height="22" rx="2" stroke="#7DF4C4" stroke-width="1.5" opacity="0.5"/>
+          <path d="M10 14H30M10 19H22M10 24H18" stroke="#7DF4C4" stroke-width="1.5" stroke-linecap="round"/>
+          <path d="M28 22L32 26L28 30" stroke="#4ECBF5" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+          <path d="M25 26H32" stroke="#4ECBF5" stroke-width="1.5" stroke-linecap="round"/>
+        </svg>
+        <div class="service-title">Accounting & Controls</div>
+        <p class="service-desc">
+          Clean books and tight processes are the foundation of good financial management. We help you build and maintain both.
+        </p>
+        <ul class="service-items">
+          <li>Month-end close oversight</li>
+          <li>Financial statement review</li>
+          <li>Chart of accounts setup</li>
+          <li>Accounting team management</li>
+          <li>Audit & compliance preparation</li>
+        </ul>
+      </div>
+
+      <!-- Service 4 -->
+      <div class="service-card">
+        <div class="service-number">04 ——</div>
+        <svg class="service-icon" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <circle cx="12" cy="12" r="5" stroke="#7DF4C4" stroke-width="1.5"/>
+          <circle cx="28" cy="12" r="5" stroke="#7DF4C4" stroke-width="1.5" opacity="0.6"/>
+          <circle cx="20" cy="28" r="5" stroke="#4ECBF5" stroke-width="1.5"/>
+          <path d="M17 12H23M14.5 16.5L17.5 24M25.5 16.5L22.5 24" stroke="#7DF4C4" stroke-width="1" stroke-linecap="round" opacity="0.5"/>
+        </svg>
+        <div class="service-title">Headcount Planning</div>
+        <p class="service-desc">
+          Hiring decisions are your largest cost lever. Build plans that align headcount with growth while keeping runway in check.
+        </p>
+        <ul class="service-items">
+          <li>Headcount modeling & capacity planning</li>
+          <li>Compensation benchmarking</li>
+          <li>Departmental hiring plans</li>
+          <li>Workforce cost analysis</li>
+          <li>Org design financial modeling</li>
+        </ul>
+      </div>
+
+      <!-- Service 5 -->
+      <div class="service-card">
+        <div class="service-number">05 ——</div>
+        <svg class="service-icon" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M8 32L14 22L20 26L26 16L32 8" stroke="#7DF4C4" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+          <path d="M26 8H32V14" stroke="#7DF4C4" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+          <circle cx="14" cy="22" r="2.5" fill="#4ECBF5" opacity="0.7"/>
+          <circle cx="20" cy="26" r="2.5" fill="#4ECBF5" opacity="0.7"/>
+          <circle cx="26" cy="16" r="2.5" fill="#4ECBF5" opacity="0.7"/>
+        </svg>
+        <div class="service-title">Financial Modeling</div>
+        <p class="service-desc">
+          Purpose-built models for fundraising, strategic decisions, and scenario analysis.
+        </p>
+        <ul class="service-items">
+          <li>Three-statement financial models</li>
+          <li>Fundraise & runway modeling</li>
+          <li>Scenario & sensitivity analysis</li>
+          <li>Unit economics modeling</li>
+          <li>Investor-ready model builds</li>
+        </ul>
+      </div>
+
+      <!-- Service 6 -->
+      <div class="service-card">
+        <div class="service-number">06 ——</div>
+        <svg class="service-icon" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <rect x="6" y="6" width="12" height="12" rx="2" stroke="#7DF4C4" stroke-width="1.5" opacity="0.5"/>
+          <rect x="22" y="6" width="12" height="12" rx="2" stroke="#4ECBF5" stroke-width="1.5" opacity="0.7"/>
+          <rect x="6" y="22" width="12" height="12" rx="2" stroke="#4ECBF5" stroke-width="1.5" opacity="0.7"/>
+          <rect x="22" y="22" width="12" height="12" rx="2" stroke="#7DF4C4" stroke-width="1.5"/>
+          <path d="M18 12H22M28 18V22M12 18V22M18 28H22" stroke="#7DF4C4" stroke-width="1" stroke-linecap="round" opacity="0.4"/>
+        </svg>
+        <div class="service-title">Strategic Projects</div>
+        <p class="service-desc">
+          One-time or project-based engagements for specific financial challenges.
+        </p>
+        <ul class="service-items">
+          <li>SaaS metrics & benchmarking</li>
+          <li>Pricing & unit economics analysis</li>
+          <li>Financial due diligence support</li>
+          <li>Process & systems assessment</li>
+          <li>Ad hoc financial analysis</li>
+        </ul>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- WHO WE SERVE -->
+<section id="clients">
+  <div class="section-tag">Who We Serve</div>
+  <h2 class="section-h2">Built for builders.</h2>
+  <p style="font-size: 16px; font-weight: 300; color: var(--text-muted); max-width: 520px; margin-top: 16px; line-height: 1.7;">
+    We love working with teams that are moving fast and need a financial partner who can keep up.
+  </p>
+
+  <div class="clients-grid">
+    <div class="client-tile">
+      <div class="client-stage">Seed / Pre-Series A</div>
+      <div class="client-type">Early-Stage Startups</div>
+      <p class="client-desc">Get financial infrastructure in place before you need it. Build your first budget, model your runway, and show up to fundraising conversations prepared.</p>
+    </div>
+    <div class="client-tile">
+      <div class="client-stage">Series A / B</div>
+      <div class="client-type">Growth-Stage Companies</div>
+      <p class="client-desc">Professionalize your finance function as your team and complexity grows. Move from scrappy to structured without losing speed.</p>
+    </div>
+    <div class="client-tile">
+      <div class="client-stage">Series B+</div>
+      <div class="client-type">Scaling Organizations</div>
+      <p class="client-desc">Sophisticated FP&A support for teams that need rigorous planning, cross-functional financial alignment, and board-ready reporting.</p>
+    </div>
+    <div class="client-tile">
+      <div class="client-stage">Any Stage</div>
+      <div class="client-type">Small Businesses</div>
+      <p class="client-desc">Founder-led businesses that need a trusted financial advisor to help make sense of the numbers and make better decisions.</p>
+    </div>
+  </div>
+</section>
+
+<!-- PROCESS -->
+<section id="process">
+  <div class="process-inner">
+    <div class="section-tag">How It Works</div>
+    <h2 class="section-h2">Simple by design.</h2>
+
+    <div class="process-steps">
+      <div class="process-step">
+        <div class="step-dot">01</div>
+        <div class="step-title">Intro Call</div>
+        <p class="step-desc">We start with a short conversation to understand your business, your current finance setup, and what you need help with.</p>
+      </div>
+      <div class="process-step">
+        <div class="step-dot">02</div>
+        <div class="step-title">Scope & Proposal</div>
+        <p class="step-desc">We define the engagement clearly with deliverables, timeline, and pricing. No ambiguity, no surprise scope creep.</p>
+      </div>
+      <div class="process-step">
+        <div class="step-dot">03</div>
+        <div class="step-title">Execution</div>
+        <p class="step-desc">We get to work. Expect clear communication, fast turnarounds, and outputs built for your actual audience.</p>
+      </div>
+      <div class="process-step">
+        <div class="step-dot">04</div>
+        <div class="step-title">Ongoing or One-Time</div>
+        <p class="step-desc">We can stay on as a fractional partner or wrap after a defined project. The relationship is structured however works best for you.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section id="contact">
+  <div class="section-tag" style="justify-content: center;">Contact</div>
+  <h2 class="contact-h2">Let's talk <em>numbers.</em></h2>
+  <p class="contact-sub">
+    Whether you have a specific project in mind or just want to explore what working together could look like — reach out.
+  </p>
+
+  <div class="contact-card">
+    <p style="font-family: 'DM Mono', monospace; font-size: 11px; color: var(--text-dim); letter-spacing: 0.15em; text-transform: uppercase; margin-bottom: 16px;">// Get in Touch</p>
+    <a href="mailto:hello@synthwavecapital.com" class="contact-email">hello@synthwavecapital.com</a>
+    <p style="font-size: 14px; font-weight: 300; color: var(--text-muted); line-height: 1.7;">
+    </p>
+    <div class="contact-note">Austin, Texas · Engagements Nationwide</div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-logo">SYNTHWAVE CAPITAL</div>
+  <div class="footer-copy">© 2025 Synthwave Capital LLC · All rights reserved</div>
+  <div class="footer-legal">Austin, TX</div>
+</footer>
+
 </body>
 </html>
