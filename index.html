@@ -37,7 +37,6 @@
     overflow-x: hidden;
   }
 
-  /* GRID TEXTURE */
   body::before {
     content: '';
     position: fixed;
@@ -50,7 +49,6 @@
     z-index: 0;
   }
 
-  /* SCANLINE overlay */
   body::after {
     content: '';
     position: fixed;
@@ -73,14 +71,17 @@
     left: 0;
     right: 0;
     z-index: 100;
+    background: rgba(10,12,15,0.85);
+    backdrop-filter: blur(16px);
+    border-bottom: 1px solid var(--border);
+  }
+
+  .nav-inner {
     display: flex;
     align-items: center;
     justify-content: space-between;
     padding: 0 48px;
     height: 68px;
-    background: rgba(10,12,15,0.85);
-    backdrop-filter: blur(16px);
-    border-bottom: 1px solid var(--border);
   }
 
   .nav-logo {
@@ -154,6 +155,75 @@
     border-color: var(--accent) !important;
     color: var(--accent) !important;
   }
+
+  /* HAMBURGER */
+  .nav-hamburger {
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    gap: 5px;
+    width: 36px;
+    height: 36px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 4px;
+  }
+
+  .nav-hamburger span {
+    display: block;
+    width: 22px;
+    height: 1.5px;
+    background: var(--text-muted);
+    transition: all 0.25s;
+    transform-origin: center;
+  }
+
+  .nav-hamburger.open span:nth-child(1) {
+    transform: translateY(6.5px) rotate(45deg);
+    background: var(--accent);
+  }
+  .nav-hamburger.open span:nth-child(2) {
+    opacity: 0;
+  }
+  .nav-hamburger.open span:nth-child(3) {
+    transform: translateY(-6.5px) rotate(-45deg);
+    background: var(--accent);
+  }
+
+  /* MOBILE DROPDOWN */
+  .nav-mobile {
+    display: none;
+    flex-direction: column;
+    padding: 12px 24px 20px;
+    border-top: 1px solid var(--border);
+    background: rgba(10,12,15,0.97);
+  }
+
+  .nav-mobile.open {
+    display: flex;
+  }
+
+  .nav-mobile a {
+    font-family: 'DM Mono', monospace;
+    font-size: 13px;
+    font-weight: 400;
+    color: var(--text-muted);
+    text-decoration: none;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    padding: 14px 0;
+    border-bottom: 1px solid var(--border);
+    transition: color 0.2s;
+  }
+
+  .nav-mobile a:last-child {
+    border-bottom: none;
+    color: var(--accent);
+    margin-top: 4px;
+  }
+
+  .nav-mobile a:hover { color: var(--accent); }
 
   /* SECTIONS */
   section {
@@ -436,9 +506,7 @@
     transition: background 0.25s;
   }
 
-  .service-card:hover {
-    background: #1a2130;
-  }
+  .service-card:hover { background: #1a2130; }
 
   .service-number {
     font-family: 'DM Mono', monospace;
@@ -722,7 +790,6 @@
     letter-spacing: 0.05em;
   }
 
-  /* DIVIDER GLOW */
   .glow-divider {
     width: 100%;
     height: 1px;
@@ -733,8 +800,9 @@
 
   /* RESPONSIVE */
   @media (max-width: 900px) {
-    nav { padding: 0 24px; }
+    .nav-inner { padding: 0 24px; }
     .nav-links { display: none; }
+    .nav-hamburger { display: flex; }
     #hero, #about, #clients, #contact { padding-left: 24px; padding-right: 24px; }
     #services, #process { padding-left: 24px; padding-right: 24px; }
     .about-grid { grid-template-columns: 1fr; gap: 40px; }
@@ -750,7 +818,6 @@
     .hero-stats { gap: 28px; }
   }
 
-  /* FADE IN ANIMATION */
   @keyframes fadeUp {
     from { opacity: 0; transform: translateY(20px); }
     to   { opacity: 1; transform: translateY(0); }
@@ -765,7 +832,6 @@
   .fade-up:nth-child(3) { animation-delay: 0.35s; }
   .fade-up:nth-child(4) { animation-delay: 0.5s; }
 
-  /* TERMINAL BLINK */
   @keyframes blink {
     0%,100% { opacity: 1; }
     50% { opacity: 0; }
@@ -786,16 +852,29 @@
 
 <!-- NAV -->
 <nav>
-  <a href="#" class="nav-logo">
-    <div class="logo-mark"></div>
-    SYNTHWAVE CAPITAL
-  </a>
-  <ul class="nav-links">
-    <li><a href="#about">About</a></li>
-    <li><a href="#services">Services</a></li>
-    <li><a href="#clients">Who We Serve</a></li>
-    <li><a href="#contact" class="nav-cta">Get in Touch</a></li>
-  </ul>
+  <div class="nav-inner">
+    <a href="#" class="nav-logo">
+      <div class="logo-mark"></div>
+      SYNTHWAVE CAPITAL
+    </a>
+    <ul class="nav-links">
+      <li><a href="#about">About</a></li>
+      <li><a href="#services">Services</a></li>
+      <li><a href="#clients">Who We Serve</a></li>
+      <li><a href="#contact" class="nav-cta">Get in Touch</a></li>
+    </ul>
+    <button class="nav-hamburger" id="hamburger" aria-label="Open menu">
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
+  </div>
+  <div class="nav-mobile" id="nav-mobile">
+    <a href="#about" onclick="closeMenu()">About</a>
+    <a href="#services" onclick="closeMenu()">Services</a>
+    <a href="#clients" onclick="closeMenu()">Who We Serve</a>
+    <a href="#contact" onclick="closeMenu()">Get in Touch</a>
+  </div>
 </nav>
 
 <!-- HERO -->
@@ -803,7 +882,7 @@
   <div class="hero-eyebrow fade-up">Financial Strategy & Advisory</div>
   <h1 class="hero-h1 fade-up">
     Finance that<br>
-    grows with<br>
+    <em>grows</em> with<br>
     your business.
   </h1>
   <p class="hero-sub fade-up">
@@ -907,7 +986,6 @@
 
     <div class="services-grid">
 
-      <!-- Service 1 -->
       <div class="service-card">
         <div class="service-number">01 ——</div>
         <svg class="service-icon" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -920,9 +998,7 @@
           <circle cx="34" cy="4" r="2" fill="#4ECBF5"/>
         </svg>
         <div class="service-title">FP&A</div>
-        <p class="service-desc">
-          Build the financial foundation your company needs to operate and scale with confidence.
-        </p>
+        <p class="service-desc">Build the financial foundation your company needs to operate and scale with confidence.</p>
         <ul class="service-items">
           <li>Annual budgeting & forecasting</li>
           <li>Rolling forecast management</li>
@@ -932,7 +1008,6 @@
         </ul>
       </div>
 
-      <!-- Service 2 -->
       <div class="service-card">
         <div class="service-number">02 ——</div>
         <svg class="service-icon" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -942,9 +1017,7 @@
           <path d="M20 6V10M20 30V34M6 20H10M30 20H34" stroke="#4ECBF5" stroke-width="1.5" stroke-linecap="round"/>
         </svg>
         <div class="service-title">Fractional CFO</div>
-        <p class="service-desc">
-          Senior financial leadership on your terms. Strategic guidance and execution support without the full-time commitment.
-        </p>
+        <p class="service-desc">Senior financial leadership on your terms. Strategic guidance and execution support without the full-time commitment.</p>
         <ul class="service-items">
           <li>Strategic financial planning</li>
           <li>Fundraising & investor relations support</li>
@@ -954,7 +1027,6 @@
         </ul>
       </div>
 
-      <!-- Service 3 -->
       <div class="service-card">
         <div class="service-number">03 ——</div>
         <svg class="service-icon" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -964,9 +1036,7 @@
           <path d="M25 26H32" stroke="#4ECBF5" stroke-width="1.5" stroke-linecap="round"/>
         </svg>
         <div class="service-title">Accounting & Controls</div>
-        <p class="service-desc">
-          Clean books and tight processes are the foundation of good financial management. We help you build and maintain both.
-        </p>
+        <p class="service-desc">Clean books and tight processes are the foundation of good financial management. We help you build and maintain both.</p>
         <ul class="service-items">
           <li>Month-end close oversight</li>
           <li>Financial statement review</li>
@@ -976,7 +1046,6 @@
         </ul>
       </div>
 
-      <!-- Service 4 -->
       <div class="service-card">
         <div class="service-number">04 ——</div>
         <svg class="service-icon" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -986,9 +1055,7 @@
           <path d="M17 12H23M14.5 16.5L17.5 24M25.5 16.5L22.5 24" stroke="#7DF4C4" stroke-width="1" stroke-linecap="round" opacity="0.5"/>
         </svg>
         <div class="service-title">Headcount Planning</div>
-        <p class="service-desc">
-          Hiring decisions are your largest cost lever. Build plans that align headcount with growth while keeping runway in check.
-        </p>
+        <p class="service-desc">Hiring decisions are your largest cost lever. Build plans that align headcount with growth while keeping runway in check.</p>
         <ul class="service-items">
           <li>Headcount modeling & capacity planning</li>
           <li>Compensation benchmarking</li>
@@ -998,7 +1065,6 @@
         </ul>
       </div>
 
-      <!-- Service 5 -->
       <div class="service-card">
         <div class="service-number">05 ——</div>
         <svg class="service-icon" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -1009,9 +1075,7 @@
           <circle cx="26" cy="16" r="2.5" fill="#4ECBF5" opacity="0.7"/>
         </svg>
         <div class="service-title">Financial Modeling</div>
-        <p class="service-desc">
-          Purpose-built models for fundraising, strategic decisions, and scenario analysis.
-        </p>
+        <p class="service-desc">Purpose-built models for fundraising, strategic decisions, and scenario analysis.</p>
         <ul class="service-items">
           <li>Three-statement financial models</li>
           <li>Fundraise & runway modeling</li>
@@ -1021,7 +1085,6 @@
         </ul>
       </div>
 
-      <!-- Service 6 -->
       <div class="service-card">
         <div class="service-number">06 ——</div>
         <svg class="service-icon" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -1032,9 +1095,7 @@
           <path d="M18 12H22M28 18V22M12 18V22M18 28H22" stroke="#7DF4C4" stroke-width="1" stroke-linecap="round" opacity="0.4"/>
         </svg>
         <div class="service-title">Strategic Projects</div>
-        <p class="service-desc">
-          One-time or project-based engagements for specific financial challenges.
-        </p>
+        <p class="service-desc">One-time or project-based engagements for specific financial challenges.</p>
         <ul class="service-items">
           <li>SaaS metrics & benchmarking</li>
           <li>Pricing & unit economics analysis</li>
@@ -1122,8 +1183,7 @@
   <div class="contact-card">
     <p style="font-family: 'DM Mono', monospace; font-size: 11px; color: var(--text-dim); letter-spacing: 0.15em; text-transform: uppercase; margin-bottom: 16px;">// Get in Touch</p>
     <a href="mailto:hello@synthwavecapital.com" class="contact-email">hello@synthwavecapital.com</a>
-    <p style="font-size: 14px; font-weight: 300; color: var(--text-muted); line-height: 1.7;">
-    </p>
+    <p style="font-size: 14px; font-weight: 300; color: var(--text-muted); line-height: 1.7;"></p>
     <div class="contact-note">Austin, Texas · Engagements Nationwide</div>
   </div>
 </section>
@@ -1134,6 +1194,21 @@
   <div class="footer-copy">© 2025 Synthwave Capital LLC · All rights reserved</div>
   <div class="footer-legal">Austin, TX</div>
 </footer>
+
+<script>
+  const hamburger = document.getElementById('hamburger');
+  const navMobile = document.getElementById('nav-mobile');
+
+  hamburger.addEventListener('click', function() {
+    hamburger.classList.toggle('open');
+    navMobile.classList.toggle('open');
+  });
+
+  function closeMenu() {
+    hamburger.classList.remove('open');
+    navMobile.classList.remove('open');
+  }
+</script>
 
 </body>
 </html>
