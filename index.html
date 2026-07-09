@@ -110,27 +110,15 @@
     text-decoration: none;
     display: flex;
     align-items: center;
-    gap: 10px;
+    gap: 6px;
   }
 
   .logo-mark {
-    width: 28px;
-    height: 28px;
-    border: 1.5px solid var(--accent);
-    border-radius: 4px;
-    display: flex;
-    align-items: flex-end;
-    justify-content: center;
-    padding: 4px 3px;
-    gap: 2px;
-    position: relative;
-    overflow: hidden;
-  }
-
-  .logo-mark .bar {
+    width: 30px;
+    height: 30px;
+    display: block;
     flex-shrink: 0;
-    width: 3px;
-    border-radius: 1px;
+    transform: translateY(-3px);
   }
 
   .nav-links {
@@ -604,7 +592,7 @@
 
   .client-tile:hover {
     border-color: var(--border-bright);
-    transform: translateY(-2px);
+    transform: translateY(-3px);
   }
 
   .client-stage {
@@ -870,14 +858,14 @@
 <nav>
   <div class="nav-inner">
     <a href="#" class="nav-logo">
-      <div class="logo-mark">
-        <div class="bar" style="height:4px;background:#7DF4C4;opacity:0.35;"></div>
-        <div class="bar" style="height:6px;background:#7DF4C4;opacity:0.5;"></div>
-        <div class="bar" style="height:9px;background:#7DF4C4;opacity:0.65;"></div>
-        <div class="bar" style="height:12px;background:#7DF4C4;opacity:0.82;"></div>
-        <div class="bar" style="height:15px;background:#7DF4C4;"></div>
-        <div class="bar" style="height:18px;background:#4ECBF5;"></div>
-      </div>
+      <svg class="logo-mark" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+        <rect width="200" height="200" rx="40" fill="#0E0E1A"/>
+        <rect x="22" y="162" width="16" height="16" rx="3" fill="#19c5d6"/><rect x="22" y="140" width="16" height="16" rx="3" fill="#36aed8"/><rect x="22" y="118" width="16" height="16" rx="3" fill="#20202E"/><rect x="22" y="96" width="16" height="16" rx="3" fill="#20202E"/><rect x="22" y="74" width="16" height="16" rx="3" fill="#20202E"/><rect x="22" y="52" width="16" height="16" rx="3" fill="#20202E"/>
+        <rect x="57" y="162" width="16" height="16" rx="3" fill="#19c5d6"/><rect x="57" y="140" width="16" height="16" rx="3" fill="#36aed8"/><rect x="57" y="118" width="16" height="16" rx="3" fill="#5a92dd"/><rect x="57" y="96" width="16" height="16" rx="3" fill="#20202E"/><rect x="57" y="74" width="16" height="16" rx="3" fill="#20202E"/><rect x="57" y="52" width="16" height="16" rx="3" fill="#20202E"/>
+        <rect x="92" y="162" width="16" height="16" rx="3" fill="#19c5d6"/><rect x="92" y="140" width="16" height="16" rx="3" fill="#36aed8"/><rect x="92" y="118" width="16" height="16" rx="3" fill="#5a92dd"/><rect x="92" y="96" width="16" height="16" rx="3" fill="#8071dc"/><rect x="92" y="74" width="16" height="16" rx="3" fill="#20202E"/><rect x="92" y="52" width="16" height="16" rx="3" fill="#20202E"/>
+        <rect x="127" y="162" width="16" height="16" rx="3" fill="#19c5d6"/><rect x="127" y="140" width="16" height="16" rx="3" fill="#36aed8"/><rect x="127" y="118" width="16" height="16" rx="3" fill="#5a92dd"/><rect x="127" y="96" width="16" height="16" rx="3" fill="#8071dc"/><rect x="127" y="74" width="16" height="16" rx="3" fill="#a355d1"/><rect x="127" y="52" width="16" height="16" rx="3" fill="#20202E"/>
+        <rect x="162" y="162" width="16" height="16" rx="3" fill="#19c5d6"/><rect x="162" y="140" width="16" height="16" rx="3" fill="#36aed8"/><rect x="162" y="118" width="16" height="16" rx="3" fill="#5a92dd"/><rect x="162" y="96" width="16" height="16" rx="3" fill="#8071dc"/><rect x="162" y="74" width="16" height="16" rx="3" fill="#a355d1"/><rect x="162" y="52" width="16" height="16" rx="3" fill="#c24fbe"/>
+      </svg>
       SYNTHWAVE CAPITAL
     </a>
     <ul class="nav-links">
