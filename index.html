@@ -803,11 +803,122 @@
     background: var(--surface);
     border: 1px solid var(--border);
     border-radius: 8px;
-    padding: 48px;
-    max-width: 520px;
+    padding: 40px;
+    max-width: 620px;
     margin: 0 auto;
     position: relative;
     overflow: hidden;
+    text-align: left;
+  }
+
+  .form-label {
+    display: block;
+    font-family: 'DM Mono', monospace;
+    font-size: 10px;
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+    color: var(--text-dim);
+    margin-bottom: 7px;
+  }
+
+  .form-label .opt {
+    text-transform: none;
+    letter-spacing: 0.04em;
+    color: #2f3948;
+    margin-left: 6px;
+  }
+
+  .form-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 16px;
+  }
+
+  .form-field { margin-bottom: 18px; }
+
+  .contact-card input,
+  .contact-card textarea {
+    width: 100%;
+    background: var(--bg);
+    border: 1px solid var(--border-bright);
+    border-radius: 4px;
+    padding: 12px 14px;
+    color: var(--text);
+    font-family: 'Inter', sans-serif;
+    font-size: 14px;
+    font-weight: 300;
+    transition: border-color 0.2s, box-shadow 0.2s;
+  }
+
+  .contact-card textarea {
+    resize: vertical;
+    min-height: 104px;
+    line-height: 1.6;
+  }
+
+  .contact-card input:focus,
+  .contact-card textarea:focus {
+    outline: none;
+    border-color: var(--accent);
+    box-shadow: 0 0 0 3px var(--accent-dim);
+  }
+
+  .contact-card input::placeholder,
+  .contact-card textarea::placeholder { color: var(--text-dim); }
+
+  .form-submit {
+    width: 100%;
+    font-family: 'DM Mono', monospace;
+    font-size: 12px;
+    font-weight: 500;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--bg);
+    background: var(--accent);
+    border: none;
+    padding: 15px 28px;
+    border-radius: 3px;
+    cursor: pointer;
+    transition: all 0.2s;
+    margin-top: 4px;
+  }
+
+  .form-submit:hover:not(:disabled) { background: #3fd2e0; }
+  .form-submit:disabled { opacity: 0.5; cursor: default; }
+
+  .form-status {
+    font-family: 'DM Mono', monospace;
+    font-size: 12px;
+    line-height: 1.6;
+    margin-top: 16px;
+    display: none;
+  }
+
+  .form-status.show { display: block; }
+  .form-status.ok  { color: var(--accent); }
+  .form-status.err { color: #e8756b; }
+
+  .form-hp {
+    position: absolute;
+    left: -9999px;
+    opacity: 0;
+    pointer-events: none;
+  }
+
+  .contact-alt {
+    margin-top: 26px;
+    padding-top: 22px;
+    border-top: 1px solid var(--border);
+    text-align: center;
+  }
+
+  .contact-alt-label {
+    font-family: 'DM Mono', monospace;
+    font-size: 10px;
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+    color: var(--text-dim);
+    margin-bottom: 10px;
   }
 
   .contact-card::before {
@@ -888,6 +999,8 @@
 
   @media (max-width: 560px) {
     .clients-grid { grid-template-columns: 1fr; }
+    .form-row { grid-template-columns: 1fr; gap: 0; }
+    .contact-card { padding: 28px 22px; }
   }
 
   @keyframes fadeUp {
@@ -1252,10 +1365,45 @@
   </p>
 
   <div class="contact-card">
-    <p style="font-family: 'DM Mono', monospace; font-size: 11px; color: var(--text-dim); letter-spacing: 0.15em; text-transform: uppercase; margin-bottom: 16px;">// Get in Touch</p>
-    <a href="mailto:hello@synthwavecapital.com" class="contact-email">hello@synthwavecapital.com</a>
-    <p style="font-size: 14px; font-weight: 300; color: var(--text-muted); line-height: 1.7;"></p>
-    <div class="contact-note">Austin, Texas</div>
+    <form id="contact-form" novalidate>
+      <div class="form-row">
+        <div class="form-field">
+          <label class="form-label" for="cf-name">Name</label>
+          <input type="text" id="cf-name" name="firstname" placeholder="Jane Doe" required>
+        </div>
+        <div class="form-field">
+          <label class="form-label" for="cf-company">Company <span class="opt">(optional)</span></label>
+          <input type="text" id="cf-company" name="company" placeholder="Company name">
+        </div>
+      </div>
+
+      <div class="form-row">
+        <div class="form-field">
+          <label class="form-label" for="cf-email">Email</label>
+          <input type="email" id="cf-email" name="email" placeholder="jane@company.com" required>
+        </div>
+        <div class="form-field">
+          <label class="form-label" for="cf-phone">Phone <span class="opt">(optional)</span></label>
+          <input type="tel" id="cf-phone" name="phone" placeholder="(512) 555-0100">
+        </div>
+      </div>
+
+      <div class="form-field">
+        <label class="form-label" for="cf-message">How can we help? <span class="opt">(optional)</span></label>
+        <textarea id="cf-message" name="message" placeholder="Tell us a bit about your business and what you're looking for."></textarea>
+      </div>
+
+      <!-- anti-spam honeypot: hidden from humans, bots fill it in -->
+      <input class="form-hp" type="text" name="website_url" tabindex="-1" autocomplete="off" aria-hidden="true">
+
+      <button type="submit" class="form-submit" id="cf-submit">Send Message</button>
+      <div class="form-status" id="cf-status"></div>
+    </form>
+
+    <div class="contact-alt">
+      <div class="contact-alt-label">// Or email us directly</div>
+      <a href="mailto:hello@synthwavecapital.com" class="contact-email" style="margin-bottom:0;font-size:15px;">hello@synthwavecapital.com</a>
+    </div>
   </div>
   </div>
 </section>
@@ -1360,6 +1508,80 @@
           setTimeout(function () { tick(colObj); }, i * 120);
         });
       }
+    });
+  })();
+  /* ---- Contact form -> HubSpot Forms API ---- */
+  (function () {
+    /* ====== FILL THESE IN (see notes) ====== */
+    var PORTAL_ID = 'YOUR_PORTAL_ID';
+    var FORM_GUID = 'YOUR_FORM_GUID';
+    /* ====================================== */
+
+    var form = document.getElementById('contact-form');
+    if (!form) return;
+    var btn = document.getElementById('cf-submit');
+    var status = document.getElementById('cf-status');
+
+    function say(msg, ok) {
+      status.textContent = msg;
+      status.className = 'form-status show ' + (ok ? 'ok' : 'err');
+    }
+
+    function getCookie(name) {
+      var m = document.cookie.match('(^|;)\\s*' + name + '\\s*=\\s*([^;]+)');
+      return m ? m.pop() : '';
+    }
+
+    form.addEventListener('submit', function (e) {
+      e.preventDefault();
+
+      // honeypot tripped -> silently pretend success
+      if (form.website_url.value) { say('Thanks — we\'ll be in touch shortly.', true); return; }
+
+      var name = form.firstname.value.trim();
+      var email = form.email.value.trim();
+      if (!name || !email || email.indexOf('@') === -1) {
+        say('Please enter your name and a valid email address.', false);
+        return;
+      }
+
+      var fields = [];
+      ['firstname', 'company', 'email', 'phone', 'message'].forEach(function (key) {
+        var val = form[key] ? form[key].value.trim() : '';
+        if (val) fields.push({ name: key, value: val });
+      });
+
+      var payload = {
+        fields: fields,
+        context: {
+          pageUri: window.location.href,
+          pageName: document.title
+        }
+      };
+      var hutk = getCookie('hubspotutk');
+      if (hutk) payload.context.hutk = hutk;
+
+      btn.disabled = true;
+      btn.textContent = 'Sending...';
+      status.className = 'form-status';
+
+      fetch('https://api.hsforms.com/submissions/v3/integration/submit/' + PORTAL_ID + '/' + FORM_GUID, {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(payload)
+      })
+        .then(function (res) {
+          if (!res.ok) throw new Error('Submission failed');
+          form.reset();
+          say('Thanks — we received your message and will be in touch shortly.', true);
+        })
+        .catch(function () {
+          say('Something went wrong. Please email hello@synthwavecapital.com directly.', false);
+        })
+        .then(function () {
+          btn.disabled = false;
+          btn.textContent = 'Send Message';
+        });
     });
   })();
 </script>
