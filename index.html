@@ -444,36 +444,15 @@
     border-color: rgba(255,255,255,0.25);
   }
 
-  .hero-stats {
-    display: flex;
-    align-items: center;
-    gap: 48px;
-    margin-top: 72px;
-    padding-top: 48px;
-    border-top: 1px solid var(--border);
-    flex-wrap: wrap;
-  }
-
-  .hero-stat-num {
-    font-family: 'Syne', sans-serif;
-    font-weight: 700;
-    font-size: 32px;
-    color: var(--accent);
-    line-height: 1;
-    margin-bottom: 4px;
-  }
-
-  .hero-stat-label {
-    font-family: 'DM Mono', monospace;
-    font-size: 11px;
-    letter-spacing: 0.12em;
-    text-transform: uppercase;
-    color: var(--text-muted);
-  }
-
   /* ABOUT */
   #about {
     padding: 120px 48px;
+    background: var(--bg2);
+    border-top: 1px solid var(--border);
+    border-bottom: 1px solid var(--border);
+  }
+
+  .about-inner {
     max-width: 1200px;
     margin: 0 auto;
   }
@@ -583,9 +562,6 @@
   /* SERVICES */
   #services {
     padding: 120px 48px;
-    background: var(--bg2);
-    border-top: 1px solid var(--border);
-    border-bottom: 1px solid var(--border);
   }
 
   .services-inner {
@@ -667,6 +643,12 @@
   /* WHO WE SERVE */
   #clients {
     padding: 120px 48px;
+    background: var(--bg2);
+    border-top: 1px solid var(--border);
+    border-bottom: 1px solid var(--border);
+  }
+
+  .clients-inner {
     max-width: 1200px;
     margin: 0 auto;
   }
@@ -719,9 +701,6 @@
   /* HOW IT WORKS */
   #process {
     padding: 120px 48px;
-    background: var(--bg2);
-    border-top: 1px solid var(--border);
-    border-bottom: 1px solid var(--border);
   }
 
   .process-inner {
@@ -741,8 +720,8 @@
     content: '';
     position: absolute;
     top: 20px;
-    left: 12.5%;
-    right: 12.5%;
+    left: 68px;
+    right: calc(25% - 28px);
     height: 1px;
     background: var(--border-bright);
     opacity: 1;
@@ -758,7 +737,7 @@
     height: 40px;
     border-radius: 50%;
     border: 1px solid var(--border-bright);
-    background: var(--bg2);
+    background: var(--bg);
     display: flex;
     align-items: center;
     justify-content: center;
@@ -786,9 +765,14 @@
   /* CONTACT */
   #contact {
     padding: 140px 48px;
+    background: var(--bg2);
+    border-top: 1px solid var(--border);
+    text-align: center;
+  }
+
+  .contact-inner {
     max-width: 900px;
     margin: 0 auto;
-    text-align: center;
   }
 
   .contact-h2 {
@@ -904,7 +888,6 @@
 
   @media (max-width: 560px) {
     .clients-grid { grid-template-columns: 1fr; }
-    .hero-stats { gap: 28px; }
   }
 
   @keyframes fadeUp {
@@ -994,7 +977,7 @@
 
     <div class="meter-card fade-up">
       <div class="meter-head">
-        <div class="meter-live"><span class="meter-live-dot"></span>Live &middot; Signal Meter</div>
+        <div class="meter-live"><span class="meter-live-dot"></span>Live</div>
         <div class="meter-scale">&minus;&infin; &middot; +12 dB</div>
       </div>
       <div class="meter-cols" id="meter"></div>
@@ -1008,30 +991,13 @@
     </div>
   </div>
 
-  <div class="hero-stats">
-    <div>
-      <div class="hero-stat-num">Operational Finance</div>
-      <div class="hero-stat-label">Planning & Analysis</div>
-    </div>
-    <div>
-      <div class="hero-stat-num">CFO</div>
-      <div class="hero-stat-label">Strategic Advisory</div>
-    </div>
-    <div>
-      <div class="hero-stat-num">Seed → Late</div>
-      <div class="hero-stat-label">All Company Stages</div>
-    </div>
-    <div>
-      <div class="hero-stat-num">TX-Based<span class="cursor"></span></div>
-      <div class="hero-stat-label">Serving Teams Nationwide</div>
-    </div>
-  </div>
 </section>
 
 <div class="glow-divider"></div>
 
 <!-- ABOUT -->
 <section id="about">
+  <div class="about-inner">
   <div class="section-tag">About</div>
   <h2 class="section-h2">Financial expertise,<br>built for founders and operators</h2>
 
@@ -1075,17 +1041,9 @@
             <span class="tag">Insurance</span>
           </div>
         </div>
-
-        <div style="margin-top: 24px; padding-top: 24px; border-top: 1px solid var(--border);">
-          <div class="about-card-label">// Company Stages</div>
-          <div class="about-tags" style="margin-top: 12px;">
-            <span class="tag">Seed</span>
-            <span class="tag">Series A-C</span>
-            <span class="tag">$0-$100m Revenue</span>
-          </div>
-        </div>
       </div>
     </div>
+  </div>
   </div>
 </section>
 
@@ -1221,6 +1179,7 @@
 
 <!-- WHO WE SERVE -->
 <section id="clients">
+  <div class="clients-inner">
   <div class="section-tag">Who We Serve</div>
   <h2 class="section-h2">Built for builders</h2>
   <p style="font-size: 16px; font-weight: 300; color: var(--text-muted); max-width: 520px; margin-top: 16px; line-height: 1.7;">
@@ -1248,6 +1207,7 @@
       <div class="client-type">Small Businesses</div>
       <p class="client-desc">Founder-led businesses that need a trusted financial advisor to help make sense of the numbers and make better decisions.</p>
     </div>
+  </div>
   </div>
 </section>
 
@@ -1284,6 +1244,7 @@
 
 <!-- CONTACT -->
 <section id="contact">
+  <div class="contact-inner">
   <div class="section-tag" style="justify-content: center;">Contact</div>
   <h2 class="contact-h2">Let's talk <em>numbers</em></h2>
   <p class="contact-sub">
@@ -1295,6 +1256,7 @@
     <a href="mailto:hello@synthwavecapital.com" class="contact-email">hello@synthwavecapital.com</a>
     <p style="font-size: 14px; font-weight: 300; color: var(--text-muted); line-height: 1.7;"></p>
     <div class="contact-note">Austin, Texas</div>
+  </div>
   </div>
 </section>
 
