@@ -1512,10 +1512,16 @@
   })();
   /* ---- Contact form -> HubSpot Forms API ---- */
   (function () {
-    /* ====== FILL THESE IN (see notes) ====== */
-    var PORTAL_ID = 'YOUR_PORTAL_ID';
-    var FORM_GUID = 'YOUR_FORM_GUID';
-    /* ====================================== */
+    /* ====== HubSpot form settings ====== */
+    var PORTAL_ID = '246227830';
+    var FORM_GUID = '25895e8e-6d50-4e28-a9fe-6636d2a6de2a';
+    var REGION    = 'na2';   // from the HubSpot embed code
+    /* =================================== */
+
+    // Region-specific host first, standard host as fallback.
+    var HOSTS = (REGION && REGION !== 'na1')
+      ? ['api-' + REGION + '.hsforms.com', 'api.hsforms.com']
+      : ['api.hsforms.com'];
 
     var form = document.getElementById('contact-form');
     if (!form) return;
@@ -1565,17 +1571,28 @@
       btn.textContent = 'Sending...';
       status.className = 'form-status';
 
-      fetch('https://api.hsforms.com/submissions/v3/integration/submit/' + PORTAL_ID + '/' + FORM_GUID, {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify(payload)
-      })
-        .then(function (res) {
-          if (!res.ok) throw new Error('Submission failed');
-          form.reset();
-          say('Thanks — we received your message and will be in touch shortly.', true);
+      function post(host) {
+        return fetch('https://' + host + '/submissions/v3/integration/submit/' + PORTAL_ID + '/' + FORM_GUID, {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify(payload)
+        }).then(function (res) {
+          if (res.ok) return res;
+          return res.text().then(function (t) { throw new Error(host + ': ' + (t || res.status)); });
+        });
+      }
+
+      post(HOSTS[0])
+        .catch(function (err) {
+          if (HOSTS.length > 1) return post(HOSTS[1]);
+          throw err;
         })
-        .catch(function () {
+        .then(function () {
+          form.reset();
+          say('Thanks \u2014 we received your message and will be in touch shortly.', true);
+        })
+        .catch(function (err) {
+          console.error('HubSpot form submission failed:', err && err.message);
           say('Something went wrong. Please email hello@synthwavecapital.com directly.', false);
         })
         .then(function () {
